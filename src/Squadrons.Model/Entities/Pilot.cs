@@ -11,6 +11,8 @@ namespace Squadrons.Model.Entities
 
         public GenderType Gender { get; set; }
 
+        public PilotType? PilotType { get; set; }
+
         public int ShipId { get; set; }
         public Ship Ship { get; set; } = null!;
 

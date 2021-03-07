@@ -5,4 +5,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Squadrons.Dal\Squadrons.Dal.csproj" />
+    <ProjectReference Include="..\Squadrons.Model\Squadrons.Model.csproj" />
+  </ItemGroup>
+
 </Project>
