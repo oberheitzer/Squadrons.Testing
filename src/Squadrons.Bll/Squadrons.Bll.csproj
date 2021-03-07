@@ -10,4 +10,9 @@
     <ProjectReference Include="..\Squadrons.Model\Squadrons.Model.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Dtos\Ships\" />
+    <Folder Include="Dtos\Pilots\" />
+  </ItemGroup>
+
 </Project>

@@ -1,11 +1,12 @@
-﻿using Squadrons.Dal.Common.Repositories;
+﻿using Squadrons.Model.Interfaces;
+using Squadrons.Model.Common.Repositories;
 using Squadrons.Model.Entities;
 
 namespace Squadrons.Dal.Repositories
 {
-    public class SquadronsRepository : RepositoryBase<SquadronsTestingDbContext, Squadron>
+    public class SquadronsRepository : RepositoryBase<SquadronsTestingDbContext, Squadron>, ISquadronsRepository
     {
-        protected SquadronsRepository(SquadronsTestingDbContext dbContext) 
+        public SquadronsRepository(SquadronsTestingDbContext dbContext)
             : base(dbContext) { }
     }
 }

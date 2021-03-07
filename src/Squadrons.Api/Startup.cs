@@ -4,7 +4,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using Squadrons.Bll.Interfaces;
+using Squadrons.Bll.Services;
 using Squadrons.Dal;
+using Squadrons.Dal.Repositories;
+using Squadrons.Model.Interfaces;
 
 namespace Squadrons.Api
 {
@@ -20,6 +24,9 @@ namespace Squadrons.Api
             {
                 options.UseInMemoryDatabase("Squadrons");
             });
+
+            services.AddScoped<ISquadronsService, SquadronsService>();
+            services.AddScoped<ISquadronsRepository, SquadronsRepository>();
 
             services.AddSwaggerGen(c =>
             {
